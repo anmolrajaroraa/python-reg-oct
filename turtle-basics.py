@@ -14,9 +14,10 @@ fred.shape('turtle')
 fred.color('white')
 fred.turtlesize(2,2)'''
 
-gameChoices = ['stone', 'paper', 'scissors']
-cpuChoice = random.choice(gameChoices)
-print(cpuChoice)
+userWins = 0
+cpuWins = 0
+draw = 0
+
 
 '''if choice == 'square':
     for i in [ 0 , 1 , 2 , 3 ] :
@@ -27,29 +28,47 @@ elif choice == 'circle':
 elif choice == 'dot':
     fred.dot(100)   #diameter
 else:
-    print('Shape not found!')
+    print('Shape not found!')'''
 
-while gameContinue:
-    pass
-'''
+while True:
+    print(f"Score -> User : {userWins}, CPU : {cpuWins}, Drawn : {draw}, Matches Played : {userWins + cpuWins + draw}")
+    userChoice = input( "Enter your choice : " )
 
-if userChoice == 'end':
-    #gameContinue = False
-    quit()
-elif userChoice == 'stone':
-    if cpuChoice == 'stone':
-        print("game draw")
-    elif cpuChoice == 'paper':
-        print('Cpu won')
-        cpuWins = cpuWins + 1
+    gameChoices = [ 'stone' , 'paper' , 'scissors' ]
+    cpuChoice = random.choice( gameChoices )
+    print( cpuChoice )
+
+    if userChoice == 'end':
+        quit()
+    elif userChoice == 'stone':
+        if cpuChoice == 'stone':
+            print("game draw")
+            draw = draw + 1
+        elif cpuChoice == 'paper':
+            print('Cpu won')
+            cpuWins = cpuWins + 1
+        else:
+            print('User won')
+            userWins = userWins + 1
+    elif userChoice == 'paper':
+        if cpuChoice == 'paper':
+            print("game draw")
+            draw = draw + 1
+        elif cpuChoice == 'scissors':
+            print('Cpu won')
+            cpuWins = cpuWins + 1
+        else:
+            print('User won')
+            userWins = userWins + 1
+    elif userChoice == 'scissors':
+        if cpuChoice == 'scissors':
+            print("game draw")
+            draw = draw + 1
+        elif cpuChoice == 'stone':
+            print('Cpu won')
+            cpuWins = cpuWins + 1
+        else:
+            print('User won')
+            userWins = userWins + 1
     else:
-        print('User won')
-        userWins = userWins + 1
-elif userChoice == 'paper':
-    pass
-elif userChoice == 'scissors':
-    pass
-else:
-    print('Wrong choice')
-
-quit()
+        print('Wrong choice')

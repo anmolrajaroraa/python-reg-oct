@@ -18,17 +18,17 @@ for i in range(50):
     print(turtleColor)
     fred.color(turtleColor)
 
-    x = random.choice(coordinates)
-    y = random.choice(coordinates)
-    print(x,y)
+    #x = random.choice(coordinates)
+    #y = random.choice(coordinates)
+    #print(x,y)
     fred.penup()
-    fred.setposition(x,y)
+    #fred.setposition(x,y)
     fred.pendown()
 
     shape = random.choice(shapes)
     print(shape)
 
-    if shape == 'square' :
+    '''if shape == 'square' :
         for i in range(4) :
             fred.forward( 100 )
             fred.left( 90 )
@@ -36,14 +36,24 @@ for i in range(50):
         fred.circle( 50 )  # radius
     elif shape == 'dot' :
         fred.dot( 100 )  # diameter
-    elif shape == 'triangle':
-        for i in range(3):
-            fred.forward(100)
-            fred.left(120)
-    else:
+    elif shape == 'triangle':'''
+    for j in range(3):
+        fred.forward(10 * i)
+        fred.left(120)
+    fred.right( 150 )
+    fred.penup( )
+    fred.forward( 5 )
+    fred.pendown( )
+    fred.left( 150 )
+    '''fred.right(150)
+    fred.penup()
+    fred.forward(5)
+    fred.pendown()
+    fred.left(135)'''
+    '''else:
         for i in range(6):
             fred.forward(100)
-            fred.left(60)
+            fred.left(60)'''
 
 while True:
     pass

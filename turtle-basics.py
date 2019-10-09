@@ -32,9 +32,15 @@ else:
 
 while True:
     print(f"Score -> User : {userWins}, CPU : {cpuWins}, Drawn : {draw}, Matches Played : {userWins + cpuWins + draw}")
+
+    #print('''1. Stone
+#2. Paper
+#3. Scissors''')
+
     userChoice = input( "Enter your choice : " )
 
     gameChoices = [ 'stone' , 'paper' , 'scissors' ]
+    #gameChoice = range(3)
     cpuChoice = random.choice( gameChoices )
     print( cpuChoice )
 

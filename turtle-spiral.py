@@ -13,13 +13,13 @@ for i in range(100):
     print( turtleColor )
     fred.color( turtleColor )
     fred.circle((5 * i))
-    fred.left(10)
+    #fred.left(10)
 
-    '''fred.right(90)
+    fred.right(90)
     fred.penup()
-    fred.forward(10)
+    fred.forward(5)
     fred.pendown()
-    fred.left(90)'''
+    fred.left(90)
 
     #For triangle
     '''for j in range(3):

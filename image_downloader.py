@@ -405,3 +405,12 @@ IndexError: tuple index out of range
 ('img_104.jpg', <http.client.HTTPMessage object at 0x107b405c0>)
 ('img_107.jpg', <http.client.HTTPMessage object at 0x107b40160>)
 >>> 
+
+
+
+#for espncricinfo
+for i in range(len(images)):
+	if str(images[i]).count(' src') == 1:
+		imgSrcs.append(images[i]['src'])
+	elif str(images[i]).count('data-default-src') == 1:
+		imgSrcs.append(images[i]['data-default-src'])

@@ -16,7 +16,7 @@ print(f_temp)
 f_temp = [temp_convert(t) for t in temp]
 print(f_temp)
 
-f_temp = [  (lambda c : 9/5 * c + 32)(t)    for t in temp]
+f_temp = [  (lambda c : 9/5 * c + 32)(t)    for t in temp]   #anonymous fn
 print(f_temp)
 
 f_temp = list(map(temp_convert,temp))
@@ -24,3 +24,25 @@ print(f_temp)
 
 f_temp = list(map(lambda c: 9/5 * c + 32,temp))
 print(f_temp)
+
+
+
+def even(n):
+    return n % 2 == 0
+
+numbers = list(range(1,101))
+
+#newList = [number for number in numbers if even(number)]
+
+newList = list(filter(lambda n:n % 2 == 0, numbers))
+
+print(newList)
+
+
+names = ['Ram', 'Shyam', 'Mohan']
+
+for i in range(len(names)):
+    print(f"{i+1}. {names[i]}")
+
+for index,name in enumerate(names):
+    print(f"{index+1}. {name}")

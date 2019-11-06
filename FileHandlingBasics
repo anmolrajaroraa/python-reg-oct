@@ -1,0 +1,14 @@
+File Handling
+
+1. Read - r, r+ (file should exist)
+2. Write - w, w+ (file will be created if not found)
+3. Append - a, a+
+
+Binary files
+
+rb,wb,ab,rb+,wb+,ab+
+
+Steps to handle a file:
+1. Open
+2. Operation
+3. Close
